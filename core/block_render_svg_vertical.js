@@ -30,13 +30,17 @@ goog.require('Blockly.BlockSvg');
 goog.require('Blockly.scratchBlocksUtils');
 goog.require('Blockly.utils');
 
+//#### PIJAM CONSTS ####
+const PIJAM_INCREASE = 1.25;
+//#### ############ ####
+
 
 // UI constants for rendering blocks.
 /**
 * Grid unit to pixels conversion
 * @const
 */
-Blockly.BlockSvg.GRID_UNIT = 4;
+Blockly.BlockSvg.GRID_UNIT = parseInt(PIJAM_INCREASE * 4);
 
 /**
  * Horizontal space between elements.
@@ -418,13 +422,13 @@ Blockly.BlockSvg.INLINE_PADDING_Y = 1 * Blockly.BlockSvg.GRID_UNIT;
  * Point size of text field before animation. Must match size in CSS.
  * See implementation in field_textinput.
  */
-Blockly.BlockSvg.FIELD_TEXTINPUT_FONTSIZE_INITIAL = 12;
+Blockly.BlockSvg.FIELD_TEXTINPUT_FONTSIZE_INITIAL = parseInt(PIJAM_INCREASE * 12);
 
 /**
  * Point size of text field after animation.
  * See implementation in field_textinput.
  */
-Blockly.BlockSvg.FIELD_TEXTINPUT_FONTSIZE_FINAL = 12;
+Blockly.BlockSvg.FIELD_TEXTINPUT_FONTSIZE_FINAL = parseInt(PIJAM_INCREASE * 12);
 
 /**
  * Whether text fields are allowed to expand past their truncated block size.
